@@ -83,7 +83,8 @@ int main(int argc, char* argv[]) {
                 prevy=y;
                 existed=true;
             }
-                int ndots=64;//sqrt(pow((prevx-x),2)+pow((prevy-y),2))/16;
+                int ndots=max(2,(int)sqrt(pow((prevx-x),2)+pow((prevy-y),2)));//sqrt(pow((prevx-x),2)+pow((prevy-y),2))/16;
+                cout<<sqrt(pow((prevx-x),2)+pow((prevy-y),2))<<"---------"<<endl;
                 double deltax=x,deltay=y;
                 for(int i=0;i<ndots;i++)
                 {
